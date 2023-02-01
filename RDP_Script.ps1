@@ -10,6 +10,10 @@ $localusername = 'localhost\administrator'
 $temp_path = './temp'
 $failed_connect_file = "$temp_path\failed_connections.txt"
 
+if(!(Test-Path -Path $temp_path)) {
+    New-Item -Path $temp_path -ItemType Directory
+}
+
 #Get credentials in case laps cant find one.
 $credentialparams = @{
     'Message' = 'Enter the default admin password'
