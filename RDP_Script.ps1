@@ -34,7 +34,7 @@ foreach ($ComputerName in $Computers) {
     Write-Host "checking if $ComputerName is available"
     
     #Ping computer to see it is up.
-    if (!(Test-Connection $ComputerName -Count 1 -ErrorAction SilentlyContinue)) {
+    if (!(Test-Connection $ComputerName -Quiet -Count 1 -ErrorAction SilentlyContinue)) {
         Write-Error "Cant find host $ComputerName"
         Write-Error "Ensure that $ComputerName exists and is connected to the network"
         $ComputerName >> $failed_connect_file 
