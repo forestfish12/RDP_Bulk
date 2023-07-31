@@ -1,5 +1,4 @@
 # RDP Bulk Powershell Script
----
 ### About
 This script package is designed to run multiple Remote Desktop sessions in a row. It access the local host administrator account and uses LAPS or a provided password.
 ### Usage 
