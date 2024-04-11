@@ -1,7 +1,8 @@
 param (
     [String[]]$Computers,
     [String]$Prefix,
-    [System.Array]$Range
+    [System.Array]$Range,
+    [String]$Suffix
 )
 
 #Setup varables and dependencies
@@ -22,7 +23,7 @@ $credentialparams = @{
 
 #Compile list of computers from provided arguments
 foreach ($num in $Range) {
-    [String]$name = $Prefix + $num
+    [String]$name = $Prefix + $num + $Suffix
     $Computers += $name
 }
 
