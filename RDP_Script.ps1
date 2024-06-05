@@ -1,8 +1,8 @@
 param (
-    [String[]]$Computers,
     [String]$Prefix,
     [System.Array]$Range,
-    [String]$Suffix
+    [String]$Suffix,
+    [String[]]$Computers
 )
 
 #Setup varables and dependencies
